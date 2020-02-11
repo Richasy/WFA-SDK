@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>WarframeAlertingPrime.SDK</RootNamespace>
+    <AssemblyName>WFA_SDK</AssemblyName>
+    <Authors>Richasy</Authors>
+    <Company></Company>
+    <Product>Warframe Alerting Prime</Product>
+    <Description>SDK for getting API data provided by WFA</Description>
+    <PackageIcon>wfalogo.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageId>Richasy.WFA.Sdk</PackageId>
+    <RepositoryUrl>https://github.com/Richasy/WFA-SDK</RepositoryUrl>
+    <PackageTags>wfa, warframe, richasy</PackageTags>
+    <PackageProjectUrl>https://github.com/Richasy/WFA-SDK</PackageProjectUrl>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="4.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\zar23\Desktop\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="wfalogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
