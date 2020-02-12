@@ -26,5 +26,17 @@ namespace WarframeAlertingPrime.SDK.Models.Others
         public const string STALKER_URL = "basic/stalker";
         public const string KUVA_URL = "basic/kuva";
         public const string SENTIENT_URL = "basic/sentient";
+
+        public const string USER_DETAIL_URL = "account/user";
+        public const string USER_QUERY_URL = "account/userQuery";
+
+        public const string RIVENMARKET_PROFILE_URL = "rm/profile";
+        public const string RIVEMMARKET_ADVICE_PRICE_URL = "rm/advice";
+        public const string RIVEMMARKET_LASTEST_ORDERS_URL = "rm/lastest";
+        public const string RIVEMMARKET_ORDER_QUERY_URL = "rm/orders";
+
+        public const string APP_META_VERSION_URL = "center/metas";
+
+        public const string LIB_QUERY_URL = "lib";
     }
 }
