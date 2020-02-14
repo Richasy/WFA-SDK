@@ -13,8 +13,8 @@ namespace WarframeAlertingPrime.SDK.Models.User
         public string weapon { get; set; }
         public string successUser { get; set; }
         public string category { get; set; }
-        private Status _status;
-        public Status status
+        private RMOrderStatus _status;
+        public RMOrderStatus status
         {
             get => _status;
             set { _status = value; OnPropertyChanged(); }
@@ -67,34 +67,7 @@ namespace WarframeAlertingPrime.SDK.Models.User
             Refresh?.Invoke(this, true);
         }
     }
-    public enum Status
-    {
-        /// <summary>
-        /// 新卡
-        /// </summary>
-        New,
-        /// <summary>
-        /// 交易中（商家发起交易请求，等待客户确认）
-        /// </summary>
-        Trading,
-        /// <summary>
-        /// 交易结束
-        /// </summary>
-        Done,
-        /// <summary>
-        /// 暂时下架
-        /// </summary>
-        Suspend,
-        /// <summary>
-        /// 永久下架
-        /// </summary>
-        Off
-    }
-    public enum OrderType
-    {
-        Sell,
-        Buy
-    }
+    
     public class LockUser
     {
         public int Id { get; set; }

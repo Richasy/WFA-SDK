@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WarframeAlertingPrime.SDK.Models.Lib
 {
-    public class Melee : IMelee
+    public class Melee
     {
         
         public int Id { get; set; }

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WFA_Lib.Models.Others;
 
 namespace WarframeAlertingPrime.SDK.Models.Lib
 {
-    public class ArchwingGun:IGun
+    public class ArchwingGun
     {
         public int Id { get; set; }
         public string name { get; set; }

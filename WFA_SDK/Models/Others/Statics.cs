@@ -38,5 +38,11 @@ namespace WarframeAlertingPrime.SDK.Models.Others
         public const string APP_META_VERSION_URL = "center/metas";
 
         public const string LIB_QUERY_URL = "lib";
+
+        public const string WM_ORDER_QUERY_URL = "wm/orders/";
+        public const string WM_ITEMS_SET_URL = "wm/itemset/";
+        public const string WM_LASTEST_ORDERS_URL = "wm/recent";
+        public const string WM_STATISTICS_URL = "wm/statistics/";
+        public const string WM_USER_URL = "wm/profile/";
     }
 }
