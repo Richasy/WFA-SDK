@@ -60,10 +60,10 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// </summary>
         /// <param name="totalGameInfo">all game information from <c>GetAllGameInfoAsync</c> method</param>
         /// <returns></returns>
-        public CetusStatus GetEarthStatus(string totalGameInfo)
+        public EarthStatus GetEarthStatus(string totalGameInfo)
         {
             var jobj = JObject.Parse(totalGameInfo);
-            var data = JsonConvert.DeserializeObject<CetusStatus>(jobj["earthCycle"].ToString());
+            var data = JsonConvert.DeserializeObject<EarthStatus>(jobj["earthCycle"].ToString());
             return data;
         }
         /// <summary>
