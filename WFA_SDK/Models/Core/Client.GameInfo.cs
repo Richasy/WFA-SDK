@@ -158,7 +158,7 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         public List<New> GetNews(string totalGameInfo)
         {
             var jobj = JObject.Parse(totalGameInfo);
-            var data = JsonConvert.DeserializeObject<List<New>>(jobj["contructionProgress"].ToString());
+            var data = JsonConvert.DeserializeObject<List<New>>(jobj["news"].ToString());
             return data;
         }
         /// <summary>
