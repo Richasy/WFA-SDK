@@ -138,7 +138,7 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         public ConstructionProgress GetConstructionProgress(string totalGameInfo)
         {
             var jobj = JObject.Parse(totalGameInfo);
-            var data = JsonConvert.DeserializeObject<ConstructionProgress>(jobj["contructionProgress"].ToString());
+            var data = JsonConvert.DeserializeObject<ConstructionProgress>(jobj["constructionProgress"].ToString());
             return data;
         }
         /// <summary>
@@ -245,9 +245,9 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// Request Nightwave data online
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Nightwave>> GetNightwavesAsync()
+        public async Task<Nightwave> GetNightwavesAsync()
         {
-            var data = await NetworkTools.GetEntityAsync<List<Nightwave>>(InitRoute(Statics.NIGHTWAVE_URL), Token, ExceptionAction);
+            var data = await NetworkTools.GetEntityAsync<Nightwave>(InitRoute(Statics.NIGHTWAVE_URL), Token, ExceptionAction);
             return data;
         }
         /// <summary>
@@ -255,10 +255,10 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// </summary>
         /// <param name="totalGameInfo">all game information from <c>GetAllGameInfoAsync</c> method</param>
         /// <returns></returns>
-        public List<Nightwave> GetNightwaves(string totalGameInfo)
+        public Nightwave GetNightwaves(string totalGameInfo)
         {
             var jobj = JObject.Parse(totalGameInfo);
-            var data = JsonConvert.DeserializeObject<List<Nightwave>>(jobj["nightwave"].ToString());
+            var data = JsonConvert.DeserializeObject<Nightwave>(jobj["nightwave"].ToString());
             return data;
         }
         /// <summary>
@@ -395,7 +395,7 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// </summary>
         /// <param name="totalGameInfo">all game information from <c>GetAllGameInfoAsync</c> method</param>
         /// <returns></returns>
-        public SentientAnomaly GetSentient(string totalGameInfo)
+        public SentientAnomaly GetSentientAnomaly(string totalGameInfo)
         {
             var jobj = JObject.Parse(totalGameInfo);
             var data = JsonConvert.DeserializeObject<SentientAnomaly>(jobj["sentientOutposts"].ToString());
