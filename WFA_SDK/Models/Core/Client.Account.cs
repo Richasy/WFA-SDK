@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
@@ -99,14 +101,14 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// </summary>
         /// <param name="option">Request parameter</param>
         /// <returns></returns>
-        public async Task<List<Order>> QueryRivenOrdersAsync(SearchRivenOrderOption option)
+        public async Task<OrderPackage> QueryRivenOrdersAsync(SearchRivenOrderOption option)
         {
             if (string.IsNullOrEmpty(option.Weapon) && string.IsNullOrEmpty(option.Category))
                 throw new ArgumentException("must have valid weapon or category");
             string route=Statics.RIVEMMARKET_ORDER_QUERY_URL +
                     $"?orderType={option.OrderType}&pageSize={option.PageSize}&page={option.Page}" +
                     $"&category={option.Category}&weapon={option.Weapon}&isVeiled={option.IsVeiled}";
-            var orders = await NetworkTools.GetEntityAsync<List<Order>>(route, Token, ExceptionAction);
+            var orders = await NetworkTools.GetEntityAsync<OrderPackage>(route, Token, ExceptionAction);
             return orders;
         }
     }
