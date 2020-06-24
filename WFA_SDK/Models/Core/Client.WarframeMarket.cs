@@ -92,5 +92,16 @@ namespace WarframeAlertingPrime.SDK.Models.Core
             var profile = await NetworkTools.GetEntityAsync<ProfileWithOrders>(route, Token, ExceptionAction);
             return profile;
         }
+
+        /// <summary>
+        /// Get ducats price which from Warframe Market.
+        /// </summary>
+        /// <returns></returns>
+        public async Task<DucatPricePayload> GetWarframeMarketDucatsPriceAsync()
+        {
+            string route = Statics.WM_DUCAT_TOOL + $"?platform={Platform}";
+            var profile = await NetworkTools.GetEntityAsync<DucatPricePayload>(route, Token, ExceptionAction);
+            return profile;
+        }
     }
 }

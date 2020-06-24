@@ -44,5 +44,6 @@ namespace WarframeAlertingPrime.SDK.Models.Others
         public const string WM_LASTEST_ORDERS_URL = "wm/recent";
         public const string WM_STATISTICS_URL = "wm/statistics/";
         public const string WM_USER_URL = "wm/profile/";
+        public const string WM_DUCAT_TOOL = "wm/ducats";
     }
 }
