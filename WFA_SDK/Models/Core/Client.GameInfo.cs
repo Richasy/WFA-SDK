@@ -47,6 +47,26 @@ namespace WarframeAlertingPrime.SDK.Models.Core
             return cetus;
         }
         /// <summary>
+        /// Request Cambion Drift fass and vome data online
+        /// </summary>
+        /// <returns></returns>
+        public async Task<CambionStatus> GetCambionStatusAsync()
+        {
+            var cambion = await NetworkTools.GetEntityAsync<CambionStatus>(InitRoute(Statics.CAMBION_URL), Token, ExceptionAction);
+            return cambion;
+        }
+        /// <summary>
+        /// Analyze Cambion Drift fass and vome information from all game information
+        /// </summary>
+        /// <param name="totalGameInfo">all game information from <c>GetAllGameInfoAsync</c> method</param>
+        /// <returns></returns>
+        public CambionStatus GetCambionStatus(string totalGameInfo)
+        {
+            var jobj = JObject.Parse(totalGameInfo);
+            var cambion = JsonConvert.DeserializeObject<CambionStatus>(jobj["cambrionCycle"].ToString());
+            return cambion;
+        }
+        /// <summary>
         /// Request Earth day and night data online
         /// </summary>
         /// <returns></returns>

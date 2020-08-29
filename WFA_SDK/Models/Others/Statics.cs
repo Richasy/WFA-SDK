@@ -9,6 +9,7 @@ namespace WarframeAlertingPrime.SDK.Models.Others
         public const string ALL_GAMEINFO_URL = "basic/total";
         public const string CETUS_URL = "basic/cetusStatus";
         public const string EARTH_URL = "basic/earthStatus";
+        public const string CAMBION_URL = "basic/cambionStatus";
         public const string VALLIS_URL = "basic/vallisStatus";
         public const string ARBITRATION_URL = "basic/arbitration";
         public const string BOUNTY_URL = "basic/bounty";
