@@ -7,6 +7,7 @@ namespace WarframeAlertingPrime.SDK.Models.Enums
     public enum BountyRegionType
     {
         Cetus,
-        Fortuna
+        Fortuna,
+        Necralisk
     }
 }

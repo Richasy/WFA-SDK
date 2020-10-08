@@ -134,9 +134,21 @@ namespace WarframeAlertingPrime.SDK.Models.Core
         /// <returns></returns>
         public async Task<List<Bounty>> GetBountyAsync(BountyRegionType region, LanguageType language)
         {
-            string re = region.ToString().ToLower();
-            if (region == BountyRegionType.Fortuna)
-                re = "solaris";
+            string re = "";
+            switch (region)
+            {
+                case BountyRegionType.Cetus:
+                    re = "cetus";
+                    break;
+                case BountyRegionType.Fortuna:
+                    re = "solaris";
+                    break;
+                case BountyRegionType.Necralisk:
+                    re = "cambion";
+                    break;
+                default:
+                    break;
+            }
             string route = InitRoute(Statics.BOUNTY_URL) + $"&region={re}&language={language.ToString().ToLower()}";
             var data = await NetworkTools.GetEntityAsync<List<Bounty>>(route, Token, ExceptionAction);
             return data;
