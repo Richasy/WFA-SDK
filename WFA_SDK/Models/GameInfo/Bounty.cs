@@ -12,6 +12,7 @@ namespace WarframeAlertingPrime.SDK.Models.GameInfo
         public int maxLevel { get; set; }
         public string sign { get; set; }
         public int order { get; set; }
+        public string name { get; set; }
         public BountyReward[] rewards { get; set; }
     }
 
