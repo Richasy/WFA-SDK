@@ -1,5 +1,7 @@
 # Warframe Alerting Prime - C# SDK
 
+***WFA SDK out of maintenance***
+
 ## Introduce about Warframe Alerting Prime
 
 Warframe Alerting Prime (hereinafter referred to as **WFA**) is an application developed by 云之幻(Richasy) to display Warframe game information. It has now integrated many services such as Warframe Market and WFA Riven Market.
